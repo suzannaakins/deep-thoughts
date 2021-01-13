@@ -12,8 +12,8 @@ export const QUERY_THOUGHTS = gql`
                 _id
                 createdAt
                 username
-                reactionbody
+                reactionBody
             }
         }
     }
-`
+`;
