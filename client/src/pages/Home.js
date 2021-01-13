@@ -7,7 +7,6 @@ const Home = () => {
   //use useQuery hook to make the query request
   const { loading, data } = useQuery(QUERY_THOUGHTS);
   const thoughts = data?.thoughts || [];
-  console.log(thoughts);
 
   return (
     <main>
