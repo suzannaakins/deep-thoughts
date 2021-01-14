@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/react-hooks';
 import { LOGIN_USER } from '../utils/mutations';
+import Auth from '../utils/auth';
 
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -26,8 +27,8 @@ const Login = (props) => {
         // with key/value pairs that match directly to what our formState object looks like
         variables: { ...formState }
       });
-
-      console.log(data);
+      //set the token to localStorage and redirect back to the homepage 
+      Auth.login(data.login.token);
     } catch (e) {
       console.error(e);
     }
