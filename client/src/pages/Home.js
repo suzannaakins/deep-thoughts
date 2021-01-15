@@ -1,6 +1,6 @@
 import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
-import { QUERY_THOUGHTS, QUERY_ME_BASIC, QUERY_ME } from '../utils/queries';
+import { QUERY_THOUGHTS, QUERY_ME_BASIC } from '../utils/queries';
 import ThoughtList from '../components/ThoughtList';
 import FriendList from '../components/FriendList';
 import Auth from '../utils/auth';
